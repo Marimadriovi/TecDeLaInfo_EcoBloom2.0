@@ -254,84 +254,143 @@ header{
     color:#fff;
     cursor:pointer;
 }
-/*----------------------------CONTENEDOR PERSONALIZACIÓN------------------------*/
-.contenedor-producto {
-    display: flex;
-    gap: 30px;
-    align-items: stretch;
-    padding: 20px 0;
+
+/*----------------------------ESTILOS DEL CARRITO------------------------*/
+.carrito-container{
+    max-width:900px;
+    margin:30px auto;
+    padding:25px;
+    background:rgba(255,255,255,.95);
+    border:1px solid rgba(0,0,0,.1);
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
 }
 
-.bloque-ra, 
-.bloque-personalizador {
-    flex: 1;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #fff;
+.tabla-carrito{
+    width:100%;
+    border-collapse:collapse;
+    color:#333;
+    text-align:center;
 }
 
-.bloque-ra {
-    text-align: center;
+.tabla-carrito th{
+    padding:12px;
+    border-bottom:2px solid #ddd;
 }
 
-.img-qr {
-    width: 200px;
-    max-width: 100%;
-    margin: 15px auto;
+.tabla-carrito td{
+    padding:12px 8px;
+    border-bottom:1px solid #eee;
 }
 
-.nota-ra {
-    font-size: 0.9em;
-    color: #555;
+.prod-info{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-align:left;
 }
 
-.campo-select {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
+.prod-info img{
+    width:60px;
+    height:60px;
+    object-fit:cover;
+    border-radius:8px;
 }
 
-.grupo-radio {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px 0 20px 0;
+.resumen-carrito{
+    margin-top:25px;
+    padding-top:15px;
+    border-top:2px solid #eee;
+    text-align:right;
 }
 
-.grupo-radio label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
+.btn-finalizar{
+    background:#28a745;
+    color:#fff;
+    border:none;
+    padding:12px 30px;
+    font-size:16px;
+    font-weight:bold;
+    border-radius:6px;
+    cursor:pointer;
 }
 
-.btn-personalizar {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 14px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
+/*----------------------------PERSONALIZACIÓN------------------------*/
+.contenedor-producto{
+    display:flex;
+    gap:30px;
+    align-items:stretch;
+    padding:20px 0;
+}
+
+.bloque-ra,
+.bloque-personalizador{
+    flex:1;
+    border:1px solid #ddd;
+    padding:20px;
+    border-radius:10px;
+    background:#fff;
+}
+
+.bloque-ra{
+    text-align:center;
+}
+
+.img-qr{
+    width:200px;
+    max-width:100%;
+    margin:15px auto;
+}
+
+.nota-ra{
+    color:#555;
+    font-size:.9em;
+}
+
+.campo-select{
+    width:100%;
+    padding:12px;
+    margin:8px 0 15px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.grupo-radio{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin:10px 0 20px;
+}
+
+.grupo-radio label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+.btn-personalizar{
+    width:100%;
+    background:#28a745;
+    color:#fff;
+    border:none;
+    padding:14px;
+    font-size:16px;
+    font-weight:bold;
+    border-radius:6px;
+    cursor:pointer;
 }
 
 /*----------------------------PIE DE PÁGINA------------------------*/
-#pie1 {
-    clear: both;
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-    border-top: 1px solid #ccc;
-    font-size: 0.9em;
-    background: #e0e0e0;
+#pie1{
+    clear:both;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+    border-top:1px solid #ccc;
+    background:#e0e0e0;
+    font-size:.9em;
 }
-
 /* ==========================================================================
    ADAPTACIÓN RESPONSIVA (TABLETS Y CELULARES)
    ========================================================================== */
