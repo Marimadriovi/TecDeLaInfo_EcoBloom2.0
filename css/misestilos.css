@@ -73,7 +73,7 @@ header {
     border-radius: 4px;
 }
 
-/* --- ESTILOS DEL MENÚ PARA COMPUTADORAS --- */
+/* --- ESTILOS DEL MENÚ (IGUAL PARA COMPUTADORA Y CELULAR) --- */
 #menu ul {
     display: flex;
     justify-content: center; /* Centra los elementos */
@@ -81,7 +81,7 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #2e7d32; /* Cambia esto por el verde de tu marca */
+    background-color: #2e7d32; /* Verde de tu marca */
 }
 
 #menu ul li a {
@@ -97,30 +97,10 @@ header {
     background-color: #1b5e20; /* Color al pasar el mouse */
 }
 
-/* --- ESTILOS PARA TABLETS Y CELULARES (Menos de 768px) --- */
-@media screen and (max-width: 768px) {
-    /* Mostrar el botón de hamburguesa */
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Ocultar la lista por defecto y cambiar a formato vertical */
-    #menu ul {
-        display: none; 
-        flex-direction: column;
-        width: 100%;
-    }
-
-    /* Clase que se activará con JavaScript para mostrar el menú */
-    #menu ul.active {
-        display: flex;
-    }
-
-    #menu ul li {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
+/* Opcional: Si el botón de hamburguesa (.menu-toggle) sigue existiendo en tu HTML, 
+   lo ocultamos por completo para que nunca aparezca en celulares ni computadoras */
+.menu-toggle {
+    display: none !important;
 }
 
 /*----------------------------CAJAS DE PAGINA DE INICIO------------------------*/
