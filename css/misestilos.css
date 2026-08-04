@@ -1,0 +1,661 @@
+/*----------------------------BASE------------------------*/
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+#agrupar {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+/*----------------------------OPTIMIZACIÓN GLOBAL DE IMÁGENES------------------------*/
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contenedor-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.img-promo-principal {
+    width: 60%;
+    border-radius: 8px;
+}
+
+.img-beneficio {
+    width: 80%;
+    margin: 15px auto 0 auto;
+    border-radius: 8px;
+}
+
+/*----------------------------HEADER Y LOGO------------------------*/
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.logo {
+    width: 150px;
+    margin: auto;
+}
+
+.idioma-selector {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.idioma-selector button {
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+/* --- ESTILOS DEL MENÚ PARA COMPUTADORAS --- */
+#menu ul {
+    display: flex;
+    justify-content: center; /* Centra los elementos */
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #2e7d32; /* Cambia esto por el verde de tu marca */
+}
+
+#menu ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+#menu ul li a:hover {
+    background-color: #1b5e20; /* Color al pasar el mouse */
+}
+
+/* Ocultar el botón de móviles en escritorio */
+.menu-toggle {
+    display: none;
+    background-color: #2e7d32;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* --- ESTILOS PARA TABLETS Y CELULARES (Menos de 768px) --- */
+@media screen and (max-width: 768px) {
+    /* Mostrar el botón de hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Ocultar la lista por defecto y cambiar a formato vertical */
+    #menu ul {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Clase que se activará con JavaScript para mostrar el menú */
+    #menu ul.active {
+        display: flex;
+    }
+
+    #menu ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+/*----------------------------CAJAS DE PAGINA DE INICIO------------------------*/
+.caja {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background: #e6ffe6;
+    border-radius: 6px;
+}
+
+.flotante {
+    width: 48%;
+    padding: 15px;
+    border: 1px solid #bbb;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.izquierda {
+    float: left;
+}
+
+.derecha {
+    float: right;
+}
+
+/*----------------------------CAJA DE CHATBOT------------------------*/
+#eb-chat-toggle {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #2e7d32;
+    color: #ffffff;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#eb-chat-toggle:hover {
+    transform: scale(1.08);
+    background-color: #1b5e20;
+}
+
+#eb-chat-container {
+    position: fixed;
+    bottom: 95px;
+    right: 25px;
+    width: 350px;
+    max-width: 90vw;
+    height: 480px;
+    max-height: 80vh;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.eb-chat-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+.eb-chat-header {
+    background-color: #2e7d32;
+    color: #ffffff;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.eb-chat-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.eb-close-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.eb-chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f8f9fa;
+}
+
+.eb-msg {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.eb-msg-bot {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.eb-msg-user {
+    background-color: #2e7d32;
+    color: #ffffff;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.eb-chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
+    gap: 8px;
+}
+
+.eb-chat-input input {
+    flex: 1;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 14px;
+    outline: none;
+}
+
+.eb-chat-input button {
+    background-color: #2e7d32;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*----------------------------ESTILOS DEL CARRITO------------------------*/
+.carrito-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+    color: #333;
+    text-align: center;
+}
+
+.tabla-carrito th {
+    padding: 12px;
+    font-size: 1rem;
+    border-bottom: 2px solid #ddd;
+}
+
+.tabla-carrito td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.prod-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+.prod-info img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.resumen-carrito {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 2px solid #eee;
+    text-align: right;
+}
+
+.btn-finalizar {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/*----------------------------CONTENEDOR PERSONALIZACIÓN------------------------*/
+.contenedor-producto {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+    padding: 20px 0;
+}
+
+.bloque-ra, 
+.bloque-personalizador {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.bloque-ra {
+    text-align: center;
+}
+
+.img-qr {
+    width: 200px;
+    max-width: 100%;
+    margin: 15px auto;
+}
+
+.nota-ra {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.campo-select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.grupo-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0 20px 0;
+}
+
+.grupo-radio label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.btn-personalizar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/*----------------------------PIE DE PÁGINA------------------------*/
+#pie1 {
+    clear: both;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    font-size: 0.9em;
+    background: #e0e0e0;
+}
+
+/* ==========================================================================
+   ADAPTACIÓN RESPONSIVA (TABLETS Y CELULARES)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+    #agrupar {
+        width: 96%;
+        padding: 12px;
+        margin: 10px auto;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .idioma-selector {
+        position: static;
+    }
+
+    /* Mostrar Botón de Menú */
+    #menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* MENÚ DESPLEGABLE EN MÓVIL (OCULTO POR DEFECTO) */
+    #menu ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s;
+        border-radius: 0 0 6px 6px;
+    }
+
+    /* MENÚ ABIERTO POR JAVASCRIPT */
+    #menu ul.menu-abierto {
+        max-height: 500px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #menu ul li {
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    #menu ul li a {
+        padding: 15px 20px;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    /* Cajas flotantes a 1 columna */
+    .flotante.izquierda,
+    .flotante.derecha {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .img-promo-principal {
+        width: 95%;
+    }
+
+    .img-beneficio {
+        width: 85%;
+    }
+
+    /* Apilar bloque RA y Personalizador */
+    .contenedor-producto {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    .bloque-ra, 
+    .bloque-personalizador {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #eb-chat-container {
+        right: 5vw;
+        bottom: 85px;
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carrito-container {
+        padding: 10px;
+    }
+
+    .prod-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .btn-personalizar {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}
+
+
+/* Estilos específicos para la sección y el formulario de Login */
+#seccion-login {
+    width: 45%;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.titulo-login {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.form-login .campo-grupo {
+    margin-bottom: 20px;
+}
+
+.form-login label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-login input[type="email"],
+.form-login input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto estético al hacer clic en los campos de texto */
+.form-login input[type="email"]:focus,
+.form-login input[type="password"]:focus {
+    border-color: #2e7d32;
+    outline: none;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.2);
+}
+
+.campo-boton {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.btn-enviar {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #1b5e20;
+}
+
+.texto-registro {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.texto-registro a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.texto-registro a:hover {
+    text-decoration: underline;
+}
+
+.btn-cerrar-sesion {
+    background-color: #e2ede4; /* Tono verde suave y natural */
+    color: #2e4f40;            /* Texto en verde oscuro elegante */
+    border: 1px solid #b8d0be; /* Borde sutil */
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;       /* Estilo tipo píldora moderno */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cerrar-sesion:hover {
+    background-color: #2e4f40; /* Invierte los colores al pasar el mouse */
+    color: #ffffff;
+    border-color: #2e4f40;
+}

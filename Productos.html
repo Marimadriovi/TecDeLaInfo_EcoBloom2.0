@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBloom | Productos</title>
+    <link rel="stylesheet" href="css/misestilos.css">
+    <link rel="icon" href="res/logoEcoOficial.jpg" type="image/x-icon">
+    <!-- Estlo de Productos -->
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f2f2f2;
+        }
+
+        #contenedor {
+            max-width: 1100px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .logo {
+            width: 120px;
+        }
+
+        .idioma-selector {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .idioma-selector button {
+            padding: 5px 10px;
+            margin: 3px;
+            cursor: pointer;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        nav {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .producto {
+            float: left;
+            width: 30%;
+            margin: 1.5%;
+            padding: 15px;
+            background-color: #eaffea;
+            border: 1px solid #cceccc;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .producto img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .producto h3 {
+            margin: 10px 0 5px;
+        }
+
+        .producto p {
+            font-size: 0.9em;
+            color: #444;
+        }
+
+        footer {
+            clear: both;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <header>
+            <img src="res/logoEcoOficial.jpg" alt="EcoBloom Logo" class="logo">
+            <div class="idioma-selector">
+                <button onclick="cambiarIdioma('es')">Español</button>
+                <button onclick="cambiarIdioma('en')">English</button>
+            </div>
+            <h1 id="titulo">Nuestros Productos</h1>
+        </header>
+
+        <nav id="menu">
+            <ul>
+                <li><a id="inicio" href="index.html">Inicio</a></li>
+                <li><a id="productos" href="Productos.html">Productos</a></li>
+                <li><a id="galeria" href="Galeria.html">Galería</a></li>
+                <li><a id="contacto" href="Contactos.html">Contacto</a></li>
+                <li><a id="personalización" href="Personalizacion_Producto.html">Personalización</a></li>
+                <li><a id="carrito" href="Carrito.html"><i class='bx bx-cart'></i> Carrito</a></li>
+                <li><a id="informacion" href="Informacion.html">Información</a></li>
+                <li><a id="login" href="Login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+
+        <!-- Productos -->
+        <section id="productos">
+            <div class="producto">
+                <img src="res/produ1.jpg" alt="Producto 1">
+                <h3 id="prod1">Crema Hidratante</h3>
+                <p id="prod1desc">Ideal para piel seca, 100% natural.</p>
+            </div>
+
+            <div class="producto">
+                <img src="res/produ2.jpg" alt="Producto 2">
+                <h3 id="prod2">Jabón Artesanal</h3>
+                <p id="prod2desc">Hecho con aceites esenciales orgánicos.</p>
+            </div>
+
+            <div class="producto">
+                <img src="res/produ3.jpg" alt="Producto 3">
+                <h3 id="prod3">Aceite Esencial</h3>
+                <p id="prod3desc">Aroma relajante para terapias y bienestar.</p>
+            </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer id="pie1">
+            &copy; EcoBloom 2025
+        </footer>
+    </div>
+
+    <!-- Script -->
+    <script>
+        function cambiarIdioma(idioma) {
+            if (idioma === 'en') {
+                document.getElementById('titulo').textContent = 'Our Products';
+                document.getElementById('inicio').textContent = 'Home';
+                document.getElementById('productos').textContent = 'Products';
+                document.getElementById('galeria').textContent = 'Gallery';
+                document.getElementById('contacto').textContent = 'Contact';
+                document.getElementById('personalización').textContent = 'Customization';
+                document.getElementById('carrito').textContent = 'Cart';
+                document.getElementById('informacion').textContent = 'Information';
+                document.getElementById('login').textContent = 'Log In';
+
+                document.getElementById('prod1').textContent = 'Moisturizing Cream';
+                document.getElementById('prod1desc').textContent = 'Perfect for dry skin, 100% natural.';
+                document.getElementById('prod2').textContent = 'Handmade Soap';
+                document.getElementById('prod2desc').textContent = 'Made with organic essential oils.';
+                document.getElementById('prod3').textContent = 'Essential Oil';
+                document.getElementById('prod3desc').textContent = 'Relaxing scent for therapies and wellness.';
+            } else {
+                document.getElementById('titulo').textContent = 'Nuestros Productos';
+                document.getElementById('inicio').textContent = 'Inicio';
+                document.getElementById('productos').textContent = 'Productos';
+                document.getElementById('galeria').textContent = 'Galería';
+                document.getElementById('contacto').textContent = 'Contactos';
+                document.getElementById('personalización').textContent = 'Personalización';
+                document.getElementById('carrito').textContent = 'Carrito';
+                document.getElementById('informacion').textContent = 'Información';
+                document.getElementById('login').textContent = 'Iniciar Sesión';
+
+                document.getElementById('prod1').textContent = 'Crema Hidratante';
+                document.getElementById('prod1desc').textContent = 'Ideal para piel seca, 100% natural.';
+                document.getElementById('prod2').textContent = 'Jabón Artesanal';
+                document.getElementById('prod2desc').textContent = 'Hecho con aceites esenciales orgánicos.';
+                document.getElementById('prod3').textContent = 'Aceite Esencial';
+                document.getElementById('prod3desc').textContent = 'Aroma relajante para terapias y bienestar.';
+            }
+        }
+    </script>
+</body>
+</html>

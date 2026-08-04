@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iniciar sesión en EcoBloom">
+    <meta name="keywords" content="html5, css3, javascript, ecobloom, login">
+    <title>EcoBloom | Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/misestilos.css">
+    <link rel="icon" href="res/logoEcoOficial.jpg" type="image/x-icon">
+</head>
+<body>
+    <div id="agrupar">
+        <header>
+            <img src="res/logoEcoOficial.jpg" alt="EcoBloom" class="logo">
+
+             <!-- Selector de idioma -->
+            <div class="idioma-selector">
+                <button onclick="cambiarIdioma('es')">Español</button>
+                <button onclick="cambiarIdioma('en')">English</button>
+            </div>
+        </header>
+
+       <nav id="menu">
+            <ul>
+                <li><a id="inicio" href="index.html">Inicio</a></li>
+                <li><a id="productos" href="Productos.html">Productos</a></li>
+                <li><a id="galeria" href="Galeria.html">Galería</a></li>
+                <li><a id="contacto" href="Contactos.html">Contacto</a></li>
+                <li><a id="personalización" href="Personalizacion_Producto.html">Personalización</a></li>
+                <li><a id="carrito" href="Carrito.html"><i class='bx bx-cart'></i> Carrito</a></li>
+                <li><a id="informacion" href="Informacion.html">Información</a></li>
+                <li><a id="login" href="Login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sección del Formulario de Inicio de Sesión -->
+        <section id="seccion-login">
+            <h2 class="titulo-login">Iniciar Sesión</h2>
+            
+            <form class="form-login">
+                <div class="campo-grupo">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required placeholder="tucorreo@ejemplo.com">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required placeholder="********">
+                </div>
+
+                <div class="campo-boton">
+                    <button type="button" onclick="localStorage.setItem('sesionIniciada', 'true'); window.location.href='Informacion.html';" class="btn-enviar">Entrar</button>
+                    <!-- SE CAMBIÓ AQUÍ: Se añadió class="btn-cerrar" -->
+                    <button type="button" onclick="localStorage.removeItem('sesionIniciada'); window.location.href='Login.html';" class="btn-cerrar-sesion btn-cerrar">Cerrar Sesión</button>
+                </div>
+            </form>
+
+            <p class="texto-registro">
+                ¿No tienes una cuenta? <a href="#">Regístrate aquí</a>
+            </p>
+        </section>
+
+        <div style="clear: both;"></div>
+
+        <!-- SE CAMBIÓ AQUÍ: Se cambió id="pie1" por id="pie-pagina" -->
+        <footer id="pie1">
+            &copy; Mariangel y Francis, 2026, tecnologías de la información.
+        </footer>
+    </div>
+
+    <script src="js/idioma.js"></script>
+</body>
+</html>

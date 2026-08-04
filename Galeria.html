@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBloom | Galería</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/misestilos.css">
+    <link rel="icon" href="res/logoEcoOficial.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="res/logoEcoOficial.jpg" alt="EcoBloom Logo" class="logo">
+
+        <!-- Selector de idioma -->
+        <div class="idioma-selector">
+            <button onclick="cambiarIdioma('es')">Español</button>
+            <button onclick="cambiarIdioma('en')">English</button>
+        </div>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav id="menu">
+        <ul>
+            <li><a id="inicio" href="index.html">Inicio</a></li>
+            <li><a id="productos" href="Productos.html">Productos</a></li>
+            <li><a id="galeria" href="Galeria.html">Galería</a></li>
+            <li><a id="contacto" href="Contactos.html">Contacto</a></li>
+            <li><a id="personalización" href="Personalizacion_Producto.html">Personalización</a></li>
+            <li><a id="carrito" href="Carrito.html"><i class='bx bx-cart'></i> Carrito</a></li>
+            <li><a id="informacion" href="Informacion.html">Información</a></li>
+            <li><a id="login" href="Login.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="titulo-galeria">Galería de Imágenes</h1>
+
+    <!-- Contenedor de la galería -->
+    <div class="galeria">
+        <img src="res/galeria1.png" class="imagen" alt="Galería 1">
+        <img src="res/galeria2.png" class="imagen" alt="Galería 2">
+        <img src="res/galeria3.png" class="imagen" alt="Galería 3">
+        <img src="res/galeria4.png" class="imagen" alt="Galería 4">
+        <img src="res/galeria5.png" class="imagen" alt="Galería 5">
+        <img src="res/galeria6.jpg" class="imagen" alt="Galería 6">
+        <img src="res/galeria7.png" class="imagen" alt="Galería 7">
+        <img src="res/galeria8.png" class="imagen" alt="Galería 8">
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="js/idioma.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

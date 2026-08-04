@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ejemplo de html5">
+    <meta name="keywords" content="html5, css3, javascript">
+    <title>EcoBloom | Contactos</title>
+    <link rel="stylesheet" href="css/misestilos.css">
+    <link rel="icon" href="res/logoEcoOficial.jpg" type="image/x-icon">
+</head>
+<body>
+    <div id="agrupar">
+        <header>
+            <img src="res/logoEcoOficial.jpg" alt="EcoBloom" class="logo">
+
+            <!-- Selector de idioma -->
+            <div class="idioma-selector">
+                <button onclick="cambiarIdioma('es')">Español</button>
+                <button onclick="cambiarIdioma('en')">English</button>
+            </div>
+        </header>
+
+
+        <nav id="menu">
+            <ul>
+                <li><a id="inicio" href="index.html">Inicio</a></li>
+                <li><a id="productos" href="Productos.html">Productos</a></li>
+                <li><a id="galeria" href="Galeria.html">Galería</a></li>
+                <li><a id="contacto" href="Contactos.html">Contacto</a></li>
+                <li><a id="personalización" href="Personalizacion_Producto.html">Personalización</a></li>
+                <li><a id="carrito" href="Carrito.html"><i class='bx bx-cart'></i> Carrito</a></li>
+                <li><a id="informacion" href="Informacion.html">Información</a></li>
+                <li><a id="login" href="Login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+
+        <h1 id="titulo">¡Contáctanos y te ayudamos!</h1>
+
+         <!-- Links -->
+        <a href="https://wa.me/50663271942"> <img src="res/whatsapp-line.png" style="width: 50px; height: 50px;"></a>
+        <a href="mailto:mariangelmadriovi2008@gmail.com"> <img src="res/mail-line.png" style="width: 50px; height: 50px;"></a>
+
+        <!-- Pie de página -->
+        <footer id="pie1">
+            &copy; Mariangel y Francis 2026, Tecnologías de la Información.
+        </footer>
+    </div>
+
+    <!-- Script para cambiar el idioma -->
+    <script>
+        function cambiarIdioma(idioma) {
+            if (idioma === 'es') {
+                document.getElementById("titulo").innerText = "¡Contáctanos y te ayudamos!";
+                document.getElementById("inicio").innerText = "Inicio";
+                document.getElementById("productos").innerText = "Productos";
+                document.getElementById("galeria").innerText = "Galería";
+                document.getElementById("contacto").innerText = "Contacto";
+                document.getElementById("personalización").innerText = "Personalización";
+                document.getElementById("carrito").innerText = "Carrito";
+                document.getElementById("informacion").innerText = "Información";
+                document.getElementById("login").innerText = "Iniciar Sesión";
+                document.getElementById("pie").innerText = "© Mariangel, Francis 2026, Tecnologías de la información.";
+            } else if (idioma === 'en') {
+                document.getElementById("titulo").innerText = "Contact us and we'll help you!";
+                document.getElementById("inicio").innerText = "Home";
+                document.getElementById("productos").innerText = "Products";
+                document.getElementById("galeria").innerText = "Gallery";
+                document.getElementById("contacto").innerText = "Contact";
+                document.getElementById("personalización").innerText = "Customization";
+                document.getElementById("carrito").innerText = "Cart";
+                document.getElementById("informacion").innerText = "Information";
+                document.getElementById("login").innerText = "Log In";
+                document.getElementById("pie").innerText = "© Mariangel, Francis 2026, Tecnologías de la información.";
+            }
+        }
+    </script>
+</body>
+</html>

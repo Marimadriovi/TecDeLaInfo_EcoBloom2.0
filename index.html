@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ejemplo de html5">
+    <meta name="keywords" content="html5, css3, javascript">
+    <title>EcoBloom | Inicio</title>
+    <link rel="stylesheet" href="css/misestilos.css">
+    <link rel="icon" href="res/logoEcoOficial.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="agrupar">
+        <header>
+            <img src="res/logoEcoOficial.jpg" alt="EcoBloom" class="logo">
+
+            <!-- Selector de idioma -->
+            <div class="idioma-selector">
+                <button onclick="cambiarIdioma('es')">Español</button>
+                <button onclick="cambiarIdioma('en')">English</button>
+            </div>
+        </header>
+
+        <!-- Menú de navegación -->
+        <nav id="menu">
+            <ul>
+                <li><a id="inicio" href="index.html">Inicio</a></li>
+                <li><a id="productos" href="Productos.html">Productos</a></li>
+                <li><a id="galeria" href="Galeria.html">Galería</a></li>
+                <li><a id="contacto" href="Contactos.html">Contacto</a></li>
+                <li><a id="personalizacion" href="Personalizacion_Producto.html">Personalización</a></li>
+                <li><a id="carrito" href="Carrito.html"><i class='bx bx-cart'></i> Carrito</a></li>
+                <li><a id="informacion" href="Informacion.html">Información</a></li>
+                <li><a id="login" href="Login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+
+        <!-- Imagen Promocional de la pagina principal -->
+         <img src="res/Promocional.jpg" style="width: 50%; height: 90%; margin-left: 25%;">
+
+         <!-- Contenido Principal -->
+        <section id="seccion">
+            <article class="caja">
+                <h1 id="titulo-principal">EcoBloom: Belleza Natural</h1>
+                <p id="descripcion-principal">Un producto 100% orgánico para el cuidado de tu piel y bienestar.</p>
+            </article>
+
+            <div class="flotante izquierda">
+                <!-- Beneficio 1 -->
+                <h3 id="benef1-titulo">Hidratación Profunda</h3>
+                <p id="benef1-desc">Penetra en las capas de la piel para una nutrición completa.</p>
+                <img src="res/Promocional2.jpg" style="width: 50%; height: 90%; margin-left: 25%;">
+            </div>
+
+            <div class="flotante derecha">
+                <!-- Beneficio 2 -->
+                <h3 id="benef2-titulo">Aroma Natural</h3>
+                <p id="benef2-desc">Delicada fragancia sin químicos artificiales.</p>
+                <img src="res/Promocional3.jpg" style="width: 50%; height: 85%; margin-left: 25%;">
+            </div>
+            
+            <div style="clear: both;"></div>
+        </section>
+    
+    <!-- Widget de Chat -->
+    <button id="eb-chat-toggle" onclick="toggleChat()">
+        💬
+    </button>
+
+    <!-- Ventana Flotante del Chatbot EcoBloom -->
+    <div id="eb-chat-container" class="eb-chat-hidden">
+        <div class="eb-chat-header">
+        <div class="eb-chat-title">
+        <span>🌱</span>
+        <strong>EcoBloom Bot</strong>
+    </div>
+        <button class="eb-close-btn" onclick="toggleChat()">✕</button>
+    </div>
+
+    <div id="eb-body" class="eb-chat-body">
+        <div class="eb-msg eb-msg-bot">
+            ¡Hola! 🌱 Soy el asistente virtual de EcoBloom. ¿En qué puedo ayudarte hoy?
+        </div>
+    </div>
+
+        <div class="eb-chat-input">
+            <input type="text" id="eb-input" placeholder="Escribe un mensaje..." />
+            <button id="eb-send">➤</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+    // Función sencilla para abrir y cerrar el widget del chat
+        function toggleChat() {
+        const chat = document.getElementById("eb-chat-container");
+        chat.classList.toggle("eb-chat-hidden");
+    }
+    </script>
+
+     <script src="js/idioma.js"></script>
+    <script type="text/javascript"></script>
+      <!-- Estructura Chatbot -->
+    <script src="js/chatbot.js"></script>
+
+    <!-- Pie de página -->
+     <footer id="pie1">
+            &copy; Mariangel y Francis 2026 Tecnologías de la Información 12-3
+        </footer>
+    </div>
+
+    <script>
+        // Función sencilla para abrir y cerrar el widget del chat
+        function toggleChat() {
+            const chat = document.getElementById("eb-chat-container");
+            chat.classList.toggle("eb-chat-hidden");
+        }
+    </script>
+</body>
+</html>

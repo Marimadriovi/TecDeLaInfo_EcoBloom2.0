@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBloom | Carrito de Compras</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/misestilos.css">
+    <link rel="icon" href="res/logoEcoOficial.jpg" type="image/x-icon">
+</head>
+<body>
+    <div id="agrupar">
+        <header>
+            <img src="res/logoEcoOficial.jpg" alt="EcoBloom Logo" class="logo">
+
+            <!-- Selector de idioma -->
+            <div class="idioma-selector">
+                <button onclick="cambiarIdioma('es')">Español</button>
+                <button onclick="cambiarIdioma('en')">English</button>
+            </div>
+        </header>
+
+        <!-- Menú de navegación -->
+        <nav id="menu">
+            <ul>
+                <li><a id="inicio" href="index.html">Inicio</a></li>
+                <li><a id="productos" href="Productos.html">Productos</a></li>
+                <li><a id="galeria" href="Galeria.html">Galería</a></li>
+                <li><a id="contacto" href="Contactos.html">Contacto</a></li>
+                <li><a id="personalización" href="Personalizacion_Producto.html">Personalización</a></li>
+                <li><a id="carrito" href="Carrito.html"><i class='bx bx-cart'></i> Carrito</a></li>
+                <li><a id="informacion" href="Informacion.html">Información</a></li>
+                <li><a id="login" href="Login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+
+        <h1 id="titulo-carrito" style="text-align: center; color: white; margin-top: 20px;">Tu Carrito de Compras</h1>
+
+        <!-- Contenedor principal del Carrito -->
+        <div class="carrito-container">
+            <table class="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th id="th-producto">Producto</th>
+                        <th id="th-cantidad">Cantidad</th>
+                        <th id="th-precio">Precio</th>
+                        <th id="th-subtotal">Subtotal</th>
+                        <th id="th-accion">Acción</th>
+                    </tr>
+                </thead>
+                <!-- Aquí JS insertará automáticamente las filas dinámicas -->
+                <tbody></tbody>
+            </table>
+
+            <!-- Resumen Total -->
+            <div class="resumen-carrito">
+                <p><strong id="lbl-total">Total:</strong> <span class="precio-total">$0.00</span></p>
+                <button class="btn-finalizar" id="btn-finalizar" onclick="alert('¡Gracias por tu compra!')">Finalizar Compra</button>
+            </div>
+        </div>
+
+        <!-- Pie de página -->
+        <footer id="pie1">
+            &copy; Mariangel y Francis 2026, Tecnologías de la Información.
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/idioma.js"></script>
+    <script src="js/carrito.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

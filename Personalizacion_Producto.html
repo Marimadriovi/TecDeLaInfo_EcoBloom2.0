@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ejemplo de html5">
+    <meta name="keywords" content="html5, css3, javascript">
+    <title>EcoBloom | Personalización de Producto</title>
+    <!-- Iconos de Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/misestilos.css">
+    <link rel="icon" href="res/logoEcoOficial.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="agrupar">
+        <header>
+            <img src="res/logoEcoOficial.jpg" alt="EcoBloom" class="logo">
+            
+            <!-- Selector de idioma -->
+            <div class="idioma-selector">
+                <button onclick="cambiarIdioma('es')">Español</button>
+                <button onclick="cambiarIdioma('en')">English</button>
+            </div>
+        </header>
+
+        <nav id="menu">
+            <ul>
+                <li><a id="inicio" href="index.html">Inicio</a></li>
+                <li><a id="productos" href="Productos.html">Productos</a></li>
+                <li><a id="galeria" href="Galeria.html">Galería</a></li>
+                <li><a id="contacto" href="Contactos.html">Contacto</a></li>
+                <li><a id="personalización" href="Personalizacion_Producto.html">Personalización</a></li>
+                <li><a id="carrito" href="Carrito.html"><i class='bx bx-cart'></i> Carrito</a></li>
+                <li><a id="informacion" href="Informacion.html">Información</a></li>
+                <li><a id="login" href="Login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido Principal -->
+        <section class="contenedor-producto">
+
+            <!-- LADO IZQUIERDO: VISUALIZACIÓN EN REALIDAD AUMENTADA -->
+            <div class="bloque-ra">
+                <h2 id="titulo-ra">Visualizador 3D / RA</h2>
+                <p id="desc-ra">Escanea el código QR con tu celular para ver tu jabón en Realidad Aumentada:</p>
+        
+                <!-- Imagen de Código QR generado en MyWebAR -->
+                <img src="res/https___mywebar.com_p_Project_0_ie4h1iypm4-at-mywebar.com.png" alt="Código QR Realidad Aumentada" class="img-qr">
+        
+                <p id="nota-ra" class="nota-ra">Proyecta el modelo en tu mesa o mano antes de comprar.</p>
+            </div>
+
+            <!-- LADO DERECHO: PERSONALIZACIÓN DEL PRODUCTO -->
+            <div class="bloque-personalizador">
+                <h2 id="titulo-personalizar">Personaliza tu Jabón</h2>
+                <form>
+                    <!-- Selección de Aroma -->
+                    <label for="aroma"><b id="label-aroma">Aroma / Esencia:</b></label>
+                    <select id="aroma" name="aroma" class="campo-select">
+                        <option value="limon" id="opt-limon">Limón Orgánico</option>
+                        <option value="lavanda" id="opt-lavanda">Lavanda y Manzanilla</option>
+                        <option value="menta" id="opt-menta">Menta y Eucalipto</option>
+                    </select>
+
+                    <!-- Tipo de Piel -->
+                    <label for="piel"><b id="label-piel">Tipo de Piel:</b></label>
+                    <select id="piel" name="piel" class="campo-select">
+                        <option value="sensible" id="opt-sensible">Piel Sensible</option>
+                        <option value="grasa" id="opt-grasa">Piel Grasa / Acné</option>
+                        <option value="seca" id="opt-seca">Piel Seca / Hidratante</option>
+                    </select>
+
+                    <!-- Aditivo Exfoliante -->
+                    <label><b id="label-exfoliante">Exfoliante Natural:</b></label>
+                    <div class="grupo-radio">
+                        <label for="avena">
+                            <input type="radio" id="avena" name="exfoliante" value="avena" checked>
+                            <span id="lbl-avena">Con Hojuelas de Avena</span>
+                        </label>
+                        <label for="sin-exfoliante">
+                            <input type="radio" id="sin-exfoliante" name="exfoliante" value="ninguno">
+                            <span id="lbl-sin-exfoliante">Sin exfoliante (Suave)</span>
+                        </label>
+                    </div>
+
+                    <!-- Botón de Acción -->
+                    <button type="button" onclick="agregarAlCarrito()" class="btn-personalizar" id="btn-carrito">
+                        Agregar Jabón Personalizado al Carrito
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- PIE DE PÁGINA -->
+        <footer id="pie1">
+            &copy; Mariangel y Francis 2026, Tecnologías de la Información.
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/idioma.js"></script>
+    <script src="js/carrito.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
