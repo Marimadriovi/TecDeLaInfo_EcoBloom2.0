@@ -97,18 +97,6 @@ header {
     background-color: #1b5e20; /* Color al pasar el mouse */
 }
 
-/* Ocultar el botón de móviles en escritorio */
-.menu-toggle {
-    display: none;
-    background-color: #2e7d32;
-    color: white;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-}
-
 /* --- ESTILOS PARA TABLETS Y CELULARES (Menos de 768px) --- */
 @media screen and (max-width: 768px) {
     /* Mostrar el botón de hamburguesa */
