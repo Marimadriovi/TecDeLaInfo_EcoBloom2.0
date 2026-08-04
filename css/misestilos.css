@@ -97,11 +97,6 @@ header {
     background-color: #1b5e20; /* Color al pasar el mouse */
 }
 
-/* Opcional: Si el botón de hamburguesa (.menu-toggle) sigue existiendo en tu HTML, 
-   lo ocultamos por completo para que nunca aparezca en celulares ni computadoras */
-.menu-toggle {
-    display: none !important;
-}
 
 /*----------------------------CAJAS DE PAGINA DE INICIO------------------------*/
 .caja {
