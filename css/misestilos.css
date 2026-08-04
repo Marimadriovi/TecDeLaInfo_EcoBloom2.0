@@ -517,3 +517,109 @@ header{
     }
 
 }
+
+/* ================= LOGIN ECObloom ================= */
+
+#seccion-login {
+    width: 90%;
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.titulo-login {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-grupo label {
+    color: #2e7d32;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo-grupo input {
+    padding: 12px;
+    border: 2px solid #81c784;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.campo-grupo input:focus {
+    border-color: #388e3c;
+}
+
+.campo-boton {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.btn-enviar,
+.btn-cerrar {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn-enviar {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn-enviar:hover {
+    background-color: #2e7d32;
+}
+
+.btn-cerrar {
+    background-color: #e53935;
+    color: white;
+}
+
+.btn-cerrar:hover {
+    background-color: #b71c1c;
+}
+
+.texto-registro {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.texto-registro a {
+    color: #388e3c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.texto-registro a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+#pie1 {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
