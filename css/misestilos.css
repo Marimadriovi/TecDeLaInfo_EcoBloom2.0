@@ -104,6 +104,19 @@ header{
     background:#1b5e20;
 }
 
+/* Botón del menú */
+#menu-toggle{
+    display:none;
+    width:100%;
+    background:#2e7d32;
+    color:white;
+    border:none;
+    padding:15px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
 /*----------------------------CAJAS DE PAGINA DE INICIO------------------------*/
 .caja{
     padding:15px;
@@ -417,24 +430,24 @@ header{
     }
 
     /* Menú */
+       /* Mostrar botón */
+    #menu-toggle{
+        display:block;
+    }
+    
+    /* Ocultar menú al inicio */
+    #menu{
+        display:none;
+    }
+    
+    /* Mostrar menú cuando esté abierto */
+    #menu.menu-activo{
+        display:block;
+    }
+    
     #menu ul{
         flex-direction:column;
         width:100%;
-    }
-
-    #menu ul li{
-        width:100%;
-        border-top:1px solid rgba(255,255,255,.2);
-    }
-
-    #menu ul li:first-child{
-        border-top:none;
-    }
-
-    #menu ul li a{
-        width:100%;
-        text-align:center;
-        padding:15px;
     }
 
     /* Banner */
