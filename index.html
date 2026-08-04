@@ -121,10 +121,10 @@
 
     <script>
         const botonMenu = document.getElementById("menu-toggle");
-        const menu = document.getElementById("menu");
+        const menu = document.querySelector("#menu ul");
         
-        botonMenu.addEventListener("click", function(){
-            menu.classList.toggle("menu-activo");
+        botonMenu.addEventListener("click", function () {
+            menu.classList.toggle("menu-abierto");
         });
     </script>
 </body>
