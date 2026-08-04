@@ -4,7 +4,13 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    background-image: res/hojas.avif
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../res/hojas.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /*----------------------------TÍTULO PRINCIPAL------------------------*/
@@ -13,14 +19,6 @@ h1 {
     width: 80%;
     margin: 50px auto;
     color: rgb(255, 255, 255);
-}
-
-/*----------------------------FONDO DEGRADADO OSCURO------------------------*/
-body {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../res/hojas.avif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 /*----------------------------GALERIA CON ESTILO DE CAJAS------------------------*/
