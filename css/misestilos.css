@@ -391,206 +391,116 @@ header{
     background:#e0e0e0;
     font-size:.9em;
 }
-/* ==========================================================================
-   ADAPTACIÓN RESPONSIVA (TABLETS Y CELULARES)
-   ========================================================================== */
 
-@media screen and (max-width: 768%) 
-{
-    /* MENÚ VISIBLE EN CELULARES */
-    #menu ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        background-color: #2e7d32;
-    }
-    
-    #menu ul li {
-        width: 100%;
-    }
-    
-    #menu ul li a {
-        display: block;
-        width: 100%;
-        padding: 15px;
-        text-align: center;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
+/*==========================================================================
+    ADAPTACIÓN RESPONSIVA (TABLETS Y CELULARES)
+==========================================================================*/
+
+@media screen and (max-width:768px){
+
+    #agrupar{
+        width:96%;
+        padding:12px;
+        margin:10px auto;
     }
 
-    #menu ul li {
-        width: 100%;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    header{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
     }
 
-    #menu ul li a {
-        padding: 15px 20px;
-        text-align: left;
-        font-size: 1rem;
+    .idioma-selector{
+        position:static;
+        margin-top:10px;
     }
 
-    /* Cajas flotantes a 1 columna */
-    .flotante.izquierda,
-    .flotante.derecha {
-        float: none;
-        width: 100%;
-        margin-right: 0;
+    /* Menú */
+    #menu ul{
+        flex-direction:column;
+        width:100%;
     }
 
-    .img-promo-principal {
-        width: 95%;
+    #menu ul li{
+        width:100%;
+        border-top:1px solid rgba(255,255,255,.2);
     }
 
-    .img-beneficio {
-        width: 85%;
+    #menu ul li:first-child{
+        border-top:none;
     }
 
-    /* Apilar bloque RA y Personalizador */
-    .contenedor-producto {
-        flex-direction: column;
-        gap: 20px;
-        padding: 10px 0;
+    #menu ul li a{
+        width:100%;
+        text-align:center;
+        padding:15px;
     }
 
-    .bloque-ra, 
-    .bloque-personalizador {
-        width: 100%;
-        padding: 15px;
+    /* Banner */
+    .img-promo-principal{
+        width:95%;
     }
 
-    #eb-chat-container {
-        right: 5vw;
-        bottom: 85px;
-        width: 90vw;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .carrito-container {
-        padding: 10px;
+    .img-beneficio{
+        width:90%;
     }
 
-    .prod-info {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
+    /* Inicio */
+    .flotante{
+        float:none;
+        width:100%;
+        margin-bottom:20px;
     }
 
-    .btn-personalizar {
-        padding: 12px;
-        font-size: 0.95rem;
+    /* Personalización */
+    .contenedor-producto{
+        flex-direction:column;
     }
+
+    .bloque-ra,
+    .bloque-personalizador{
+        width:100%;
+    }
+
+    /* Chat */
+    #eb-chat-container{
+        width:90vw;
+        right:5vw;
+        height:75vh;
+    }
+
 }
 
+@media screen and (max-width:480px){
 
-/* Estilos específicos para la sección y el formulario de Login */
-#seccion-login {
-    width: 45%;
-    max-width: 450px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
+    .logo{
+        width:120px;
+    }
 
-.titulo-login {
-    text-align: center;
-    color: #2e7d32;
-    margin-bottom: 25px;
-    font-size: 24px;
-}
+    #menu ul li a{
+        font-size:15px;
+        padding:14px;
+    }
 
-.form-login .campo-grupo {
-    margin-bottom: 20px;
-}
+    .prod-info{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 
-.form-login label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #444;
-}
+    .carrito-container{
+        padding:10px;
+    }
 
-.form-login input[type="email"],
-.form-login input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
-}
+    .btn-personalizar,
+    .btn-finalizar{
+        width:100%;
+    }
 
-/* Efecto estético al hacer clic en los campos de texto */
-.form-login input[type="email"]:focus,
-.form-login input[type="password"]:focus {
-    border-color: #2e7d32;
-    outline: none;
-    box-shadow: 0 0 5px rgba(46, 125, 50, 0.2);
-}
+    #eb-chat-toggle{
+        width:55px;
+        height:55px;
+        font-size:22px;
+    }
 
-.campo-boton {
-    text-align: center;
-    margin-top: 25px;
-}
-
-.btn-enviar {
-    background-color: #2e7d32;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.btn-enviar:hover {
-    background-color: #1b5e20;
-}
-
-.texto-registro {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666;
-}
-
-.texto-registro a {
-    color: #2e7d32;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.texto-registro a:hover {
-    text-decoration: underline;
-}
-
-.btn-cerrar-sesion {
-    background-color: #e2ede4; /* Tono verde suave y natural */
-    color: #2e4f40;            /* Texto en verde oscuro elegante */
-    border: 1px solid #b8d0be; /* Borde sutil */
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 20px;       /* Estilo tipo píldora moderno */
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-cerrar-sesion:hover {
-    background-color: #2e4f40; /* Invierte los colores al pasar el mouse */
-    color: #ffffff;
-    border-color: #2e4f40;
 }
