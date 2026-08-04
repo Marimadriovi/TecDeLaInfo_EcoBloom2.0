@@ -380,30 +380,32 @@ header {
    ADAPTACIÓN RESPONSIVA (TABLETS Y CELULARES)
    ========================================================================== */
 
-/* MENÚ VISIBLE EN CELULARES */
-#menu ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: #2e7d32;
-}
-
-#menu ul li {
-    width: 100%;
-}
-
-#menu ul li a {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+@media screen and (max-width: 768%) 
+{
+    /* MENÚ VISIBLE EN CELULARES */
+    #menu ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #2e7d32;
+    }
+    
+    #menu ul li {
+        width: 100%;
+    }
+    
+    #menu ul li a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
     #menu ul li {
         width: 100%;
