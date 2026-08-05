@@ -30,31 +30,31 @@ Responde de manera amable, clara y concisa (1 o 2 párrafos).`;
     return msgDiv;
   }
 
- async function sendMessage() {
-    if (!input) return;
-    const text = input.value.trim();
-    if (!text) return;
-
-    appendMessage(text, "eb-msg-user");
-    input.value = "";
-
-    const loadingMsg = appendMessage("Pensando...", "eb-msg-bot");
-
-    try {
-      const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${GROQ_API_KEY}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: "llama-3.1-8b-instant",
-          messages: [
-            { role: "system", content: SYSTEM_PROMPT },
-            { role: "user", content: text }
-          ]
-        })
-      });
+   async function sendMessage() {
+      if (!input) return;
+      const text = input.value.trim();
+      if (!text) return;
+  
+      appendMessage(text, "eb-msg-user");
+      input.value = "";
+  
+      const loadingMsg = appendMessage("Pensando...", "eb-msg-bot");
+  
+      try {
+        const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${GROQ_API_KEY}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            model: "llama-3.1-8b-instant",
+            messages: [
+              { role: "system", content: SYSTEM_PROMPT },
+              { role: "user", content: text }
+            ]
+          })
+        });
 
       const data = await response.json();
       loadingMsg.remove();
