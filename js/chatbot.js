@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   //API Key de Groq 
-  const GROQ_API_KEY = "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";
+  const GROQ_API_KEY = "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";
 
   //Prompt del sistema para el asistente virtual
   const SYSTEM_PROMPT = `Eres el asistente virtual oficial de EcoBloom, una marca de productos ecológicos y sostenibles. 
